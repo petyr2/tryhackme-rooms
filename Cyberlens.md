@@ -6,6 +6,9 @@ nmap -A <roomip>
 ```
 Then we visit the site, and we see that it is a website that pulls metadata from images.
 
+<img width="768" height="331" alt="image" src="https://github.com/user-attachments/assets/4ed714a4-2494-49bb-af13-a970b983a38f" />
+
+
 Upon viewing the page source, we found some interesting information where the web server is performing a PUT on a specific port. Upon close observation, we found that the port has some services running on it.
 
 <img width="365" height="166" alt="Screenshot From 2025-08-19 00-37-25" src="https://github.com/user-attachments/assets/58926f24-fcd5-46f8-996d-9e976eb4301d" />
