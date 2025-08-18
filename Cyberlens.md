@@ -7,11 +7,15 @@ nmap -A <roomip>
 Then we visit the site, and we see that it is a website that pulls metadata from images.
 
 Upon viewing the page source, we found some interesting information where the web server is performing a PUT on a specific port. Upon close observation, we found that the port has some services running on it.
+
 <img width="365" height="166" alt="Screenshot From 2025-08-19 00-37-25" src="https://github.com/user-attachments/assets/58926f24-fcd5-46f8-996d-9e976eb4301d" />
+
 When I visited the site, I found
+
 <img width="768" height="192" alt="image" src="https://github.com/user-attachments/assets/d1e3f7db-2eb8-4a35-bf64-80aaabdef4e7" />
 
 At this point, I had to search for the service running on port 61777, which is Apache Tika 1.17.
+
 <img width="730" height="692" alt="Screenshot From 2025-08-19 00-40-39" src="https://github.com/user-attachments/assets/0f996643-831b-42a7-b566-ccbbf68077fb" />
 
 On the [rhino](https://github.com/RhinoSecurityLabs/CVEs/tree/master/CVE-2018-1335)page, I found a script that would assist in gaining the shell. I modified the script and then ran it, and I had the shell.
