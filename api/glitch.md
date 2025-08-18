@@ -1,4 +1,4 @@
-# This is a webapp-based room where we are going to look at Node Deserialization
+# This is a webapp-based room where we are going to look at Node Deserialization that leads to RCE
 
 In Node.js, deserialization usually means taking input (often JSON or objects) and turning it back into a JavaScript object using a library such as:
 
