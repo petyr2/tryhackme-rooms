@@ -18,7 +18,7 @@ At this point, I had to search for the service running on port 61777, which is A
 
 <img width="730" height="692" alt="Screenshot From 2025-08-19 00-40-39" src="https://github.com/user-attachments/assets/0f996643-831b-42a7-b566-ccbbf68077fb" />
 
-On the [rhino](https://github.com/RhinoSecurityLabs/CVEs/tree/master/CVE-2018-1335)page, I found a script that would assist in gaining the shell. I modified the script and then ran it, and I had the shell.
+On the [rhinosecuritylabs](https://github.com/RhinoSecurityLabs/CVEs/tree/master/CVE-2018-1335)page, I found a script that would assist in gaining the shell. I modified the script and then ran it, and I had the shell.
 
 First, performed some URL encoding in order to run the script
 ```bash
