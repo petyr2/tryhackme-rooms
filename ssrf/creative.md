@@ -145,7 +145,7 @@ We can run `sudo -l` to see what commands user saad can run.
 
 Following the [article](https://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/?source=post_page-----1011230634c9---------------------------------------), we get informed that we can manipulate the LD-Preload. First, we need to create a small `C script` in `\tmp` directory.
 
-```code
+```c
 #include <stdio.h>
 #include <sys/types.h>
 #include <stdlib.h>
