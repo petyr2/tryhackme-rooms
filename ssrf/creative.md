@@ -20,8 +20,12 @@ The site seems to test for URLs to see if they are alive or dead. Upon testing l
 
 <img width="926" height="525" alt="Screenshot From 2025-08-29 01-12-56" src="https://github.com/user-attachments/assets/0f9ee41b-8288-4d06-bf9b-e437f0c60788" />
 
-```#NB
- if this is a pentest something that you would definitely want to report this is full ssrf we shouldn't be able to hit Local Host and if there was some sensitive files we could hit but I don't think there's going to be anything interesting for us
+```
+#NB
+
+ If this is a pentest something that you would definitely want to report this is full ssrf we shouldn't be able to hit Local Host,
+
+ and if there was some sensitive files we could hit but I don't think there's going to be anything interesting for us
  ````
 
 Let's use `wfuzz` to enumerate all the ports, but first, we create a file with all the ports using `seq` command.
