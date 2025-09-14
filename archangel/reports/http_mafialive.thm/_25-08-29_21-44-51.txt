@@ -1,0 +1,23 @@
+# Dirsearch started Fri Aug 29 21:47:21 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://mafialive.thm
+
+403   278B   http://mafialive.thm/.ht_wsr.txt
+403   278B   http://mafialive.thm/.htaccess.orig
+403   278B   http://mafialive.thm/.htaccessOLD2
+403   278B   http://mafialive.thm/.htm
+403   278B   http://mafialive.thm/.htaccess.bak1
+403   278B   http://mafialive.thm/.htaccess_orig
+403   278B   http://mafialive.thm/.htaccessOLD
+403   278B   http://mafialive.thm/.htaccess_sc
+403   278B   http://mafialive.thm/.htaccess.save
+403   278B   http://mafialive.thm/.htaccess.sample
+403   278B   http://mafialive.thm/.htaccessBAK
+403   278B   http://mafialive.thm/.htaccess_extra
+403   278B   http://mafialive.thm/.html
+403   278B   http://mafialive.thm/.htpasswds
+403   278B   http://mafialive.thm/.htpasswd_test
+403   278B   http://mafialive.thm/.httr-oauth
+403   278B   http://mafialive.thm/.php
+200    34B   http://mafialive.thm/robots.txt
+403   278B   http://mafialive.thm/server-status
+403   278B   http://mafialive.thm/server-status/
+200   221B   http://mafialive.thm/test.php

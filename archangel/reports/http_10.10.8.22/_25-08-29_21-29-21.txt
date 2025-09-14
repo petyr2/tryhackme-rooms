@@ -1,0 +1,26 @@
+# Dirsearch started Fri Aug 29 21:31:49 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://10.10.8.22
+
+403   275B   http://10.10.8.22/.ht_wsr.txt
+403   275B   http://10.10.8.22/.htaccess.orig
+403   275B   http://10.10.8.22/.htaccess_extra
+403   275B   http://10.10.8.22/.htaccess.save
+403   275B   http://10.10.8.22/.htaccess.sample
+403   275B   http://10.10.8.22/.htaccess_orig
+403   275B   http://10.10.8.22/.htaccessBAK
+403   275B   http://10.10.8.22/.htaccessOLD
+403   275B   http://10.10.8.22/.htm
+403   275B   http://10.10.8.22/.htaccess.bak1
+403   275B   http://10.10.8.22/.htaccessOLD2
+403   275B   http://10.10.8.22/.htaccess_sc
+403   275B   http://10.10.8.22/.httr-oauth
+403   275B   http://10.10.8.22/.html
+403   275B   http://10.10.8.22/.htpasswd_test
+403   275B   http://10.10.8.22/.htpasswds
+403   275B   http://10.10.8.22/.php
+301   308B   http://10.10.8.22/flags    -> REDIRECTS TO: http://10.10.8.22/flags/
+301   309B   http://10.10.8.22/images    -> REDIRECTS TO: http://10.10.8.22/images/
+200     0B   http://10.10.8.22/images/
+301   308B   http://10.10.8.22/pages    -> REDIRECTS TO: http://10.10.8.22/pages/
+200     0B   http://10.10.8.22/pages/
+403   275B   http://10.10.8.22/server-status
+403   275B   http://10.10.8.22/server-status/

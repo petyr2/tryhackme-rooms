@@ -1,0 +1,23 @@
+# Dirsearch started Tue Aug 19 02:59:51 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://10.10.139.134/
+
+403   278B   http://10.10.139.134/.ht_wsr.txt
+403   278B   http://10.10.139.134/.htaccess.bak1
+403   278B   http://10.10.139.134/.htaccess.sample
+403   278B   http://10.10.139.134/.htaccess_extra
+403   278B   http://10.10.139.134/.htaccess.save
+403   278B   http://10.10.139.134/.htaccess_orig
+403   278B   http://10.10.139.134/.htaccess.orig
+403   278B   http://10.10.139.134/.htaccessOLD
+403   278B   http://10.10.139.134/.htaccess_sc
+403   278B   http://10.10.139.134/.htaccessBAK
+403   278B   http://10.10.139.134/.htaccessOLD2
+403   278B   http://10.10.139.134/.htm
+403   278B   http://10.10.139.134/.html
+403   278B   http://10.10.139.134/.htpasswds
+403   278B   http://10.10.139.134/.httr-oauth
+403   278B   http://10.10.139.134/.htpasswd_test
+403   278B   http://10.10.139.134/.php
+200     1KB  http://10.10.139.134/about.html
+200     0B   http://10.10.139.134/assets/
+301   315B   http://10.10.139.134/assets    -> REDIRECTS TO: http://10.10.139.134/assets/
+200   924B   http://10.10.139.134/contact.html

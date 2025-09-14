@@ -1,0 +1,4 @@
+# Dirsearch started Thu Aug 28 23:52:37 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://creative.thm/assets
+
+301   178B   http://creative.thm/assets/js    -> REDIRECTS TO: http://creative.thm/assets/js/
+301   178B   http://creative.thm/assets/css    -> REDIRECTS TO: http://creative.thm/assets/css/
